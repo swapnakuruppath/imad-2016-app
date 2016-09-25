@@ -2,6 +2,7 @@ body {
     font-family: sans-serif;
     background-color: lightgrey;
     margin-top: 75px;
+    
 }
 
 .center {
@@ -19,4 +20,13 @@ body {
 .img-medium {
     height: 200px;
 }
+ .container{
+        max-width:800px;
+    margin:0 auto;
+    color:grey;
+        font-family:sans-serif;
+        padding-top:100px;
+        padding-left:100px;
+        padding-right:100px;
+    }
 
