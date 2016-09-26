@@ -9,7 +9,7 @@ var articleone={
     date:'date',
     content:'content'
 };
-function createtemplate(data)
+function createTemplate(data)
 {
     var title=data.title;
     var heading=data.heading;
@@ -43,7 +43,7 @@ var htmlTemplate=`
     </body>
 </html>
 `;
-return htmltemplate;
+return htmlTemplate;
 }
   app.use(morgan('combined'));
 
