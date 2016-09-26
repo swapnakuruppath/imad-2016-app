@@ -3,11 +3,23 @@ var morgan = require('morgan');
 var path = require('path');
 
 var app = express();
+var articles={
 var articleone={
     title:'article-one',
     heading:'heading',
     date:'date',
     content:'content'
+},
+var articletwo={
+     title:'article-two',
+    heading:'heading',
+    date:'date',
+    content:'content'
+},
+var articlethree={ title:'article-three',
+    heading:'heading',
+    date:'date',
+    content:'content'}
 };
 function createTemplate(data)
 {
@@ -57,13 +69,13 @@ res.send(createTemplate(articleone));
 });
 app.get('/article-two',function(req,res)
 {
-   res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
+   res.send(createTemplate(articletwo));
 
 
 });
 app.get('/article-three',function(req,res)
 {
-   res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
+   res.send(createTemplate(articlethree));
 
 
 });
