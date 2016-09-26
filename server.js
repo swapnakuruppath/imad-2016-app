@@ -9,7 +9,7 @@ var content={
     date:'date',
     content:'content'
 };
-var htmlTemplate=' 
+var htmlTemplate=`
 <html>
     <head>
     <title>
@@ -36,7 +36,7 @@ var htmlTemplate='
                     </div>
     </body>
 </html>
-';
+`;
   app.use(morgan('combined'));
 
 app.get('/', function (req, res) {
