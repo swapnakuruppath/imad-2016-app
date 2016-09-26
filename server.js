@@ -3,12 +3,18 @@ var morgan = require('morgan');
 var path = require('path');
 
 var app = express();
-var content={
+var articleone={
     title:'article-one',
     heading:'heading',
     date:'date',
     content:'content'
 };
+function createtemplate(data)
+{
+    var title=data.title;
+    var heading=data.heading;
+    var date=data.date;
+    var content=data.content;
 var htmlTemplate=`
 <html>
     <head>
@@ -37,6 +43,8 @@ var htmlTemplate=`
     </body>
 </html>
 `;
+return htmltemplate;
+}
   app.use(morgan('combined'));
 
 app.get('/', function (req, res) {
@@ -44,7 +52,7 @@ app.get('/', function (req, res) {
 });
 app.get('/article-one',function(req,res)
 {
-res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+res.send(createtemplate(articleone));
 
 });
 app.get('/article-two',function(req,res)
