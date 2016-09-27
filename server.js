@@ -1,25 +1,33 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-
 var app = express();
-var articles={
-var articleone={
+ app.use(morgan('combined'));
+
+var articles:
+{
+var articleone:
+{
     title:'article-one',
     heading:'heading',
     date:'date',
     content:'content'
 },
-var articletwo={
+var articletwo:
+{
      title:'article-two',
     heading:'heading',
     date:'date',
     content:'content'
 },
-var articlethree={ title:'article-three',
+var articlethree:
+{
+    title:'article-three',
     heading:'heading',
     date:'date',
-    content:'content'}
+    content:'content'
+    
+}
 };
 function createTemplate(data)
 {
@@ -57,8 +65,7 @@ var htmlTemplate=`
 `;
 return htmlTemplate;
 }
-  app.use(morgan('combined'));
-
+ 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
