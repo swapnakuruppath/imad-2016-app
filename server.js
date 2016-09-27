@@ -6,19 +6,19 @@ app.use(morgan('combined'));
 var articles={
  'article-one':{
     title:'article-one',
-    heading:'heading',
+    heading:'article-two',
     date:'date',
     content:'content'
 },
  'article-two':{
      title:'article-two',
-    heading:'heading',
+    heading:'article-two',
     date:'date',
     content:'content'
 },
 'article-three':{
     title:'article-three',
-    heading:'heading',
+    heading:'article-three',
     date:'date',
     content:'content'
     
