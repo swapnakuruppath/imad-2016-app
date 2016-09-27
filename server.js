@@ -3,24 +3,20 @@ var morgan = require('morgan');
 var path = require('path');
 var app = express();
 app.use(morgan('combined'));
-var articles=
-{
-var articleone:
-{
+var articles={
+ articleone:{
     title:'article-one',
     heading:'heading',
     date:'date',
     content:'content'
 },
-var articletwo:
-{
+ articletwo:{
      title:'article-two',
     heading:'heading',
     date:'date',
     content:'content'
 },
-var articlethree:
-{
+ articlethree:{
     title:'article-three',
     heading:'heading',
     date:'date',
