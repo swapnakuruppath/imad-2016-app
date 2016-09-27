@@ -2,9 +2,8 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var app = express();
- app.use(morgan('combined'));
-
-var articles:
+app.use(morgan('combined'));
+var articles=
 {
 var articleone:
 {
@@ -69,9 +68,9 @@ return htmlTemplate;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/article-one',function(req,res)
+app.get('/:articlename',function(req,res)
 {
-res.send(createTemplate(articleone));
+res.send(createTemplate(articles(articlename)));
 
 });
 app.get('/article-two',function(req,res)
