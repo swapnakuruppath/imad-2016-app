@@ -4,8 +4,8 @@ var path = require('path');
 var app = express();
 var Pool = require('pg').Pool;
 var config={
-    user:swapnakuruppath,
-    database:swapnakuruppath,
+    user:'swapnakuruppath',
+    database:'swapnakuruppath',
     host:'db.imad.hasuro-app.io',
     port:'5432',
     Password:Process.env.DB_PASSWORD
