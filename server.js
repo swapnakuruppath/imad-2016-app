@@ -2,7 +2,17 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var app = express();
+var Pool = require('pg').Pool;
+var config={
+    user:swapnakuruppath,
+    database:swapnakuruppath,
+    host:'db.imad.hasuro-app.io',
+    port:'5432',
+    Password:Process.env.DB_PASSWORD
+};
+
 app.use(morgan('combined'));
+
 var articles={
  'article-one':{
     title:'article-one',
@@ -65,6 +75,25 @@ app.get('/counter',function(req,res)
 {
     counter=counter+1;
     res.send(counter.toString());
+    
+});
+var pool = new Pool(config);
+
+app.get('/test-db',function(req,res)
+{
+    pool.query('select * from test',fun(err,result)
+    {
+       if (err)
+       {
+           res.status(500),send(err.tostring());
+         
+       }
+       else
+       {
+           res.send(JSON.stringify(result));
+       }
+        
+    });
     
 });
  
