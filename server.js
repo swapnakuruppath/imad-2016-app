@@ -8,7 +8,7 @@ var config={
     database:'swapnakuruppath',
     host:'db.imad.hasuro-app.io',
     port:'5432',
-    Password:Process.env.DB_PASSWORD
+    Password:process.env.DB_PASSWORD
 };
 
 app.use(morgan('combined'));
