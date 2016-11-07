@@ -77,11 +77,11 @@ app.get('/',function(req,res)
 });
 function hash (input,salt)
 {
-    var hashed=crypto.pbkdf2Sync('input', 'salt', 100000, 512, 'sha512');
+    var hashed=crypto.pbkdf2Sync(input, salt, 100000, 512, 'sha512');
     return hashed.tostring('hex');
 
 }
-app.get('/hash/input',function(req,res)
+app.get('/hash/:input',function(req,res)
 {
     var hashedstring=hash(req.param.input,'wrwer');
     res.send(hashedstring);
